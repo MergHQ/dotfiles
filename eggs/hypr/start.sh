@@ -3,3 +3,5 @@
 waybar &
 
 hyprpaper
+
+dunst

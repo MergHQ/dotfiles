@@ -1,15 +1,15 @@
 @import "frappe.css";
 * {
   font-family: FiraMono Nerd Font;
-  font-size: 17px;
+  font-size: 10px;
   min-height: 0;
 }
 
 #waybar {
-  background: shade(@base, 0.9);
-  border: 2px solid alpha(@crust, 0.3);
+  background: shade(@surface1, 0.9);
   color: @text;
   margin: 5px 5px;
+  opacity: 0.8;
 }
 
 #workspaces {
@@ -21,7 +21,6 @@
 
 #workspaces button {
   color: @lavender;
-  border-radius: 1rem;
   padding: 0.4rem;
 }
 
@@ -49,8 +48,8 @@
 }
 
 #clock {
-  color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
+  color: @yellow;
+  border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
 }
 
@@ -79,8 +78,8 @@
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  margin-right: 1rem;
 }
 
 #custom-music {

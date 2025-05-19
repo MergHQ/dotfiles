@@ -15,9 +15,11 @@ export let eggs = #{
       "kitty.conf": "~/.config/kitty/kitty.conf",
     },
   },
+  ghostty: #{
+    targets: "~/.config/ghostty",
+  },
   rofi: #{
     targets: "~/.config/rofi",
-    main_file: "config.rasi",
   },
   waybar: #{
     targets: "~/.config/waybar",

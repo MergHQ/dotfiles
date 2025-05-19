@@ -1,4 +1,4 @@
-@import "frappe.css";
+@import "latte.css";
 * {
   font-family: FiraMono Nerd Font;
   font-size: 10px;
@@ -6,21 +6,20 @@
 }
 
 #waybar {
-  background: shade(@surface1, 0.9);
   color: @text;
   margin: 5px 5px;
-  opacity: 0.8;
+  background-color: transparent;
 }
 
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: @crust;
+  background-color: @surface0;
   margin-left: 1rem;
 }
 
 #workspaces button {
-  color: @lavender;
+  color: @surface0;
   padding: 0.4rem;
 }
 
@@ -41,31 +40,38 @@
 #battery,
 #pulseaudio,
 #custom-lock,
+#network,
 #custom-power {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
+#network {
+  border-radius: 1rem 1rem 1rem 1rem;
+  margin-right: 1rem;
+}
+
 #clock {
-  color: @yellow;
+  color: #424242;
   border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
 }
 
 #battery {
-  color: @green;
-  border-radius: 1rem 0px 0px 1rem;
+  color: #424242;
+  border-radius: 1rem 1rem 1rem 1rem;
+  margin-right: 1rem;
 }
 
 #battery.charging {
-  color: @green;
-  border-radius: 1rem 0px 0px 1rem;
+  color: #424242;
+  border-radius: 1rem 1rem 1rem 1rem;
 }
 
 #battery.warning:not(.charging) {
   color: @red;
-  border-radius: 1rem 0px 0px 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
 }
 
 #backlight {
@@ -73,7 +79,7 @@
 }
 
 #backlight, #battery {
-    border-radius: 0;
+    border-radius: 1rem 1rem 1rem 1rem;
 }
 
 #pulseaudio {

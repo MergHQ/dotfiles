@@ -5,7 +5,11 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["clock", "pulseaudio"],
+// {% if SYSTEM.hostname == "nix" %}
+    "modules-right": ["pulseaudio", "clock"],
+// {% else %}
+    "modules-right": ["pulseaudio", "battery", "network", "clock"],
+// {% end %}
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -29,4 +33,26 @@
         },
         "on-click": "pavucontrol"
     },
+// {% if SYSTEM.hostname != "nix" %}
+   "network": {
+    "format-wifi": "<span color='#424242'> 󰤨 </span>{essid} ",
+    "format-ethernet": "<span color='#424242'> </span>Wired ",
+    "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span color='#FFA500'> 󱘖 </span>{ifname} (No IP) ",
+    "format-disconnected": "<span color='#424242'>  </span>Disconnected ",
+    "format-alt": "<span color='#424242'> 󰤨 </span>{signalStrength}% ",
+    "interval": 1
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span color='#424242'> {icon} </span>{capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
+	  "interval": 1,
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "tooltip": true
+  }
+// {% end %}
 }

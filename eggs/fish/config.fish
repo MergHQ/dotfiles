@@ -3,3 +3,6 @@ if status is-interactive
 end
 
 fish_add_path ~/.cargo/bin
+
+alias claude=~/.local/bin/claude
+fish_add_path /home/hugis/.local/bin

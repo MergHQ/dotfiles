@@ -24,4 +24,7 @@ export let eggs = #{
   waybar: #{
     targets: "~/.config/waybar",
   },
+  helix: #{
+    targets: "~/.config/helix"
+  }
 };

@@ -1,0 +1,4 @@
+theme = "kanabox"
+
+[editor.file-picker]
+hidden = false

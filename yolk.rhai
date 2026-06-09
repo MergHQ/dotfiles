@@ -7,7 +7,7 @@ export let eggs = #{
   },
   hypr: #{
     targets: "~/.config/hypr",
-    templates: ["*.conf"]
+    templates: ["*.conf", "*.lua"]
   },
   kitty: #{
     targets: #{
